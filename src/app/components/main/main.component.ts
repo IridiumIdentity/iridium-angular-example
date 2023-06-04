@@ -9,20 +9,23 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './components/main/main.component';
-import { CallbackComponent } from './components/callback/callback.component';
+import { Component } from '@angular/core';
+import { NgxIridiumClientService } from '@iridiumidentity/ngx-iridium-client';
 
-
-
-
-const routes: Routes = [
-  { path: '', component: MainComponent },
-  { path: 'callback', component: CallbackComponent }
-];
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+@Component({
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css']
 })
-export class AppRoutingModule { }
+export class MainComponent {
+  imagePath: string;
+  constructor(private iridiumClient: NgxIridiumClientService) {
+    this.imagePath = '/assets/iridium-3C-xl.png';
+  }
+
+  public login(): void {
+    this.iridiumClient.authenticateWithExternalRedirect()
+
+  }
+
+}

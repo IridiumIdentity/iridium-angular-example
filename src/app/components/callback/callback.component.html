@@ -1,0 +1,17 @@
+
+<div class="box">
+  <div class="image-wrap">
+    <img [src]="imagePath" width="650" height="114" alt="tenant image">
+
+  </div>
+  <div *ngIf="loggedIn">
+    <h1>Your user has been successfully authenticated with </h1>
+    <div class="iridium-image-wrap">
+      <img [src]="imagePath"  alt="iridium image">
+
+    </div>
+  </div>
+  <mat-error *ngIf="hasError">
+    There was an error retrieving access token
+  </mat-error>
+</div>

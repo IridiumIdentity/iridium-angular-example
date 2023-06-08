@@ -5,11 +5,8 @@
 
   </div>
   <div *ngIf="loggedIn">
-    <h1>Your user has been successfully authenticated with </h1>
-    <div class="iridium-image-wrap">
-      <img [src]="imagePath"  alt="iridium image">
+    <h1>Your user has been successfully authenticated </h1>
 
-    </div>
   </div>
   <mat-error *ngIf="hasError">
     There was an error retrieving access token

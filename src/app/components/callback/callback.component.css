@@ -12,15 +12,6 @@
 .image-wrap img {
   display: block;
   width: 100%;
-  max-width: 150px;
-  height: auto;
-  margin: auto;
-}
-
-.iridium-image-wrap img {
-  display: block;
-  width: 100%;
-  max-width: 350px;
   height: auto;
   margin: auto;
 }

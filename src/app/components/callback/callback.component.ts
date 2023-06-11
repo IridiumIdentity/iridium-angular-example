@@ -10,7 +10,7 @@
  * the License.
  */
 import { Component, OnInit } from '@angular/core';
-import { NgxIridiumClientService } from '@iridiumidentity/ngx-iridium-client';
+import { NgxIridiumClientService } from '@iridiumidentity/ngx-iridium-client'
 
 @Component({
   selector: 'app-callback',
